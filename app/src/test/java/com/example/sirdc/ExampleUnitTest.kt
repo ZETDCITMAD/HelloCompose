@@ -1,4 +1,4 @@
-package com.example.hellocompose
+package com.example.sirdc
 
 import org.junit.Test
 

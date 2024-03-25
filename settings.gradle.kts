@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Hello Compose"
+rootProject.name = "SIRDC"
 include(":app")
- 

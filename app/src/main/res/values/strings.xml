@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Hello Compose</string>
+    <string name="app_name">SIRDC</string>
+    <string name="welcomeTextField">WELCOME</string>
+    <string name="usernameTextInputTittle">Username</string>
+    <string name="passwordTextInputField">Password</string>
+    <string name="buttonLoginTittle">Login</string>
 </resources>
