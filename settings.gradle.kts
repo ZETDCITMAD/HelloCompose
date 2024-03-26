@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SIRDC"
+rootProject.name = "hello cpmpose"
 include(":app")
+ 

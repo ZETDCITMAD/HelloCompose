@@ -1,4 +1,4 @@
-package com.example.sirdc
+package com.example.hellocpmpose
 
 import org.junit.Test
 
