@@ -34,6 +34,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import com.example.hellocompose.ui.Greeting
 import com.example.hellocompose.ui.theme.HelloComposeTheme
 
 const val TAG: String = "My App Tag"
@@ -49,157 +50,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     Greeting()
-                    //ScreenTwo()
+ //                   ScreenTwo()
                 }
             }
         }
-    }
-}
-@Composable
-fun Greeting(modifier: Modifier = Modifier, screenNumber: Int = 0) {
-    var screenSelector by remember { mutableIntStateOf(screenNumber) }
-    when (screenSelector){
-        1 ->
-            LoginView(onScreenSelect = {screenSelector = 0}, modifier)
-        0 ->
-            ScreenTwo{screenSelector = 1}
-    }
-}
-
-@Composable
-fun ScreenTwo(
-    onScreenSelect: () -> Unit
-){
-    Row(){
-        Text(
-            text = "Home Page !!!",
-            fontSize = 33.sp,
-            modifier = Modifier
-                .align(
-                    Alignment.CenterVertically
-                )
-                .fillMaxHeight()
-        )
-        Button(
-            onClick = {
-                onScreenSelect()
-            },
-            content = {
-                Icon(
-                    Icons.Default.Face,
-                    contentDescription = ""
-                )
-                Text(
-                    " Go to login"
-                )
-            },
-            modifier = Modifier
-                .align(
-                    Alignment.CenterVertically
-                )
-        )
-    }
-}
-
-@Composable
-fun LoginView(onScreenSelect: () -> Unit, modifier: Modifier = Modifier){
-    val context = LocalContext.current
-    var username by remember {mutableStateOf("")}
-    var secret by remember {mutableStateOf("")}
-    var welcomeMessage by remember {mutableStateOf("")}
-
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-    ){
-        Text(
-            text = "Welcome $welcomeMessage !!!!",
-            fontSize = 33.sp,
-            modifier = Modifier
-                .align(
-                    Alignment.CenterHorizontally
-                )
-                .padding(50.dp)
-        )
-        TextField(
-            value = username,
-            onValueChange = {
-                username = it
-            },
-            placeholder = {
-                Text(
-                    text = "Username!",
-                    fontSize = 13.sp,
-                    modifier = Modifier
-                        .align(
-                            Alignment.CenterHorizontally
-                        )
-                        .padding(30.dp)
-                )
-            },
-            modifier = Modifier
-                .align(
-                    Alignment.CenterHorizontally
-                )
-                .padding(54.dp)
-        )
-        TextField(
-            value = secret,
-            onValueChange = {
-                secret = it
-            },
-            visualTransformation = PasswordVisualTransformation(),
-            placeholder = {
-                Text(
-                    text = "Password!",
-                    fontSize = 13.sp,
-                    modifier = Modifier
-                        .align(
-                            Alignment.CenterHorizontally
-                        )
-                        .padding(30.dp)
-                )
-            },
-            modifier = Modifier
-                .align(
-                    Alignment.CenterHorizontally
-                )
-                .padding(54.dp)
-        )
-        Button(
-            onClick = {
-                if(secret == "1234"){
-                    onScreenSelect()
-                    Toast.makeText(context, "Welcome, $username", Toast.LENGTH_SHORT).show()
-                    welcomeMessage = username
-                    Log.d(TAG,"Zvashanda")
-                    println("$TAG, Pedza masports")
-                }
-                else{
-                    Toast.makeText(context, "Zvarambaaaaaaaaaaaaaaaaaaaaaaaaa", Toast.LENGTH_LONG).show()
-                    Log.d(TAG,"Zvaita here?, Ha zvinenge zvaramba")
-                    println("$TAG, Zvaramaba")
-                }
-            },
-            content = {
-                Text(
-                    "Login"
-
-                )
-            },
-            modifier = Modifier
-                .align(
-                    Alignment.CenterHorizontally
-                )
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    HelloComposeTheme {
-        Greeting()
-        //ScreenTwo()
     }
 }
