@@ -1,4 +1,4 @@
-package com.example.hellocompose
+package com.example.viewmodel
 
 import org.junit.Test
 

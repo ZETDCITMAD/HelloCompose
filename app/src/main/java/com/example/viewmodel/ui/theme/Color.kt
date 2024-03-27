@@ -1,4 +1,4 @@
-package com.example.hellocompose.ui.theme
+package com.example.viewmodel.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

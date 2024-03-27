@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Hello Compose"
+rootProject.name = "ViewModel"
 include(":app")
  

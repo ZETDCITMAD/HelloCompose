@@ -1,4 +1,4 @@
-package com.example.hellocompose.ui.theme
+package com.example.viewmodel.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -38,7 +38,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun HelloComposeTheme(
+fun ViewModelTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

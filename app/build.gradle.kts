@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.hellocompose"
+    namespace = "com.example.viewmodel"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.hellocompose"
+        applicationId = "com.example.viewmodel"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -66,4 +66,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 }
