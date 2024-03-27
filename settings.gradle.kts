@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Hello Compose"
+rootProject.name = "LoginScreen"
 include(":app")
- 
